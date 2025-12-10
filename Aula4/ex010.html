@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+</head>
+<body>
+    <h1>Horario Atual</h1>
+    <input type="button" value="Olá" onclick="horario()">
+    <div id="time">
+
+    </div>
+    <script>
+        function horario() {
+            var agora = new Date()
+            var hora = agora.getHours()
+            var res = window.document.querySelector("div#time")
+            
+            res.innerHTML = `<p>Olá, agora são <strong>${hora}</strong> horas.</p>`
+            if (hora < 12) {
+                res.innerHTML += `<p><strong>Bom Dia!</strong></p>`
+            } else if (hora < 18) {
+                res.innerHTML += `<p><strong>Boa Tarde!</strong></p>`
+            } else {
+                res.innerHTML += `<p><strong>Boa Noite!</strong></p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

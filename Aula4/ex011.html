@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia</title>
+</head>
+<body>
+    <h1>Dia Atual</h1>
+    <input type="button" value="Olá" onclick="horario()">
+    <div id="time">
+
+    </div>
+    <script>
+        function horario() {
+            var agora = new Date()
+            var diaSem = agora.getDay()
+            var res = window.document.querySelector("div#time")
+            
+            res.innerHTML = `<p>Olá, tudo bem?.</p>`
+            switch (diaSem){
+                case 0:
+                    res.innerHTML += `<p>Bom domingo para você :)</p>`
+                    break
+
+                case 1:
+                    res.innerHTML += `<p>Boa segunda-feira para você :)</p>`
+                    break
+
+                case 2:
+                    res.innerHTML += `<p>Boa terça-feira para você :)</p>`
+                    break
+
+                case 3:
+                    res.innerHTML += `<p>Boa quarta-feira para você :)</p>`
+                    break
+
+                case 4:
+                    res.innerHTML += `<p>Boa quinta-feira para você :)</p>`
+                    break
+
+                case 5:
+                    res.innerHTML += `<p>Boa sexta-feira para você :)</p>`
+                    break
+
+                case 6:
+                    res.innerHTML += `<p>Bom sabado para você :)</p>`
+                    break
+
+                default:
+                    res.innerHTML += `<p>Dia não encontrado!</p>`
+                    break
+            }
+        }
+    </script>
+    
+</body>
+</html>
